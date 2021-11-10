@@ -1,9 +1,12 @@
 import net.navibot.sdk.NaviPlugin;
+import net.navibot.sdk.Trigger;
 import net.navibot.sdk.data.Message;
 import net.navibot.sdk.data.Response;
 import org.pf4j.Extension;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
+
+import java.util.HashMap;
 
 public class Main extends Plugin {
 
@@ -17,6 +20,7 @@ public class Main extends Plugin {
      * but for best functionality - leave it in place!
      */
 
+    @Trigger(keyword = "!hello")
     @Extension
     public static class MyPlugin implements NaviPlugin {
 
@@ -28,9 +32,8 @@ public class Main extends Plugin {
          * @param message incoming message
          * @return your response
          */
-        public Response onMessage(Message message) {
+        public Response onMessage(Message message, HashMap<String, String> storage) {
             return new Response(null, "world!");
         }
-
     }
 }
