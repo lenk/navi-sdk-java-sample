@@ -20,7 +20,7 @@ public class Main extends Plugin {
      * but for best functionality - leave it in place!
      */
 
-    @Trigger(keyword = "!hello")
+    @Trigger(keyword = "!hello", description = "a plugin to say world when user says !hello")
     @Extension
     public static class MyPlugin implements NaviPlugin {
 
