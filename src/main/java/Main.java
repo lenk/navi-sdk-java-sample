@@ -33,7 +33,7 @@ public class Main extends Plugin {
          * @return your response
          */
         public Response onMessage(Message message, HashMap<String, String> storage) {
-            return new Response(null, "world!");
+            return new Response("world!");
         }
     }
 }
